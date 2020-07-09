@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<application xmlns:soa="http://www.oracle.com/soa/rest" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns0="http://www.oracle.com/soasample" xmlns="http://wadl.dev.java.net/2009/02">
+   <doc title="ValidateRS">RestService</doc>
+   <grammars>
+      <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://www.oracle.com/soasample" schemaLocation="../Schemas/CanonicalOrder.xsd"/>
+        </xsd:schema>
+   </grammars>
+   <resources>
+      <resource path="/validate">
+         <method name="GET" soa:wsdlOperation="Validate_GET">
+            <doc title="GET Validate_GET">Validate payment using the GET http method</doc>
+            <request soa:paramElement="pns:PaymentInfo" xmlns:pns="http://www.oracle.com/soasample">
+               <param name="CardNum" style="query" soa:expression="$msg.request/ns0:CardNum" type="xsd:string"/>
+               <param name="ExpireDate" style="query" soa:expression="$msg.request/ns0:ExpireDate" type="xsd:string"/>
+               <param name="AuthorizationAmount" style="query" soa:expression="$msg.request/ns0:AuthorizationAmount" type="xsd:string"/>
+            </request>
+            <response status="200">
+               <representation mediaType="application/json" element="cns:PaymentStatus" xmlns:cns="http://www.oracle.com/soasample"/>
+            </response>
+         </method>
+         <method name="POST" soa:wsdlOperation="Validate_POST">
+            <doc title="POST Validate_POST">Validate payment using the POST http method</doc>
+            <request>
+               <representation mediaType="application/json" element="cns:PaymentInfo" xmlns:cns="http://www.oracle.com/soasample"/>
+            </request>
+            <response status="200">
+               <representation mediaType="application/json" element="cns:PaymentStatus" xmlns:cns="http://www.oracle.com/soasample"/>
+            </response>
+         </method>
+      </resource>
+   </resources>
+</application>

@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Faults>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>Mediators/RouteData.mplan</file>
+      <name>Mediators/RouteData.mplan</name>
+      <fix/>
+      <msg>Operation\Event "Validate_POST" does not contain case. No operation\event will be executed\processed respectively.</msg>
+   </Fault>
+</Faults>

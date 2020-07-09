@@ -1,0 +1,17 @@
+<PaymentInfo xmlns="http://www.oracle.com/soasample">
+   <CardPaymentType>256</CardPaymentType>
+   <CardNum>string2582582582</CardNum>
+   <ExpireDate>s260</ExpireDate>
+   <CardName>string261</CardName>
+   <BillingAddress>
+      <FirstName>string263</FirstName>
+      <LastName>string265</LastName>
+      <AddressLine>string267</AddressLine>
+      <City>string269</City>
+      <State>string271</State>
+      <ZipCode>string273</ZipCode>
+      <PhoneNumber>string276</PhoneNumber>
+   </BillingAddress>
+   <AuthorizationDate>2020-07-09T10:04:04.214</AuthorizationDate>
+   <AuthorizationAmount>2780.75</AuthorizationAmount>
+</PaymentInfo>
